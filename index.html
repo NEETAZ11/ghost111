@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+        <title>NABANITA</title>
+    </head>
+    <body>
+    <!--loading-container-->
+  
+    <!--end-->
+    
+    <!--before-->
+        <div id="intro">💀Enter at your own risk 💀<img id="entry-img" src="https://i.ibb.co/18tR7gn/giphy-11.gif" > 
+        </div>
+        <button onclick="haweli()" id="int">enter</button>
+        <!--end-->
+        <!--after enter-->
+        <div id="haweli">
+            
+        </div>
+        
+        
+        <!--room1-->
+        <button onclick="room1()" id="a1">Room-1</button>
+        <div id="room"></div>
+        <!--room1-->
+        <!--grave-->
+        <button onclick="grave()" id="a2">Room-3</button>
+        <div id="grave">
+            <img  id="web" src="https://i.ibb.co/ThthHVn/spider-web-1295590-480.webp">
+            <img id="spider" src="https://i.ibb.co/QQbZbRt/spider-2769985-1280.png" width="100px" height="100px">
+            <img id="spider2" src="https://i.ibb.co/QQbZbRt/spider-2769985-1280.png" width="100px" height="100px">
+           <img id="bat1" src="https://i.ibb.co/6rSmJbx/bat-151366-1280.webp" height="100px" width="100px">
+           <img id="lspi"src="https://i.ibb.co/hH7vjKV/animal-1300049-1280.png">
+        </div>
+        
+        
+      <button id="a4" onclick="room2()">Dance</button>
+      <div id ="room-two">
+      <img id="bhoot" src="https://i.ibb.co/yVPMYWR/giphy.gif">
+      <img  id ="bat" src="https://i.ibb.co/D7YrV2G/animal-1817643-480.webp" height="100px" width="150px" >
+       <img id="bhoot2" src="https://i.ibb.co/HFkbFnf/giphy.gif">
+       <img id="witch"src="https://i.ibb.co/8jgYBWB/broomstick-1297877-480.webp">
+       
+         <img id="roll" src="https://i.ibb.co/ZGs0dBZ/cackle-1295277-1280.png">
+      </div>
+      
+      
+       <button id="a5" onclick="room3()">room-2</button>
+      <div id ="room-three"></div>
+      
+      
+      <button id="a6" onclick="room4()">Room-4</button>
+      <div id ="garden">
+           <img  id="fungus" src="https://i.ibb.co/ThthHVn/spider-web-1295590-480.webp">
+     <!--   <img id="spy1" src="https://i.ibb.co/hXNzLyK/spider-3308105-480.webp">-->
+
+<img id ="spy2"  src="https://i.ibb.co/VgXqgQw/spider-5593259-1280.webp">
+
+<img id="soni" src="https://i.ibb.co/86G4KMy/witch-1751025-480.webp" >
+
+<img id="g1"  src="https://i.ibb.co/pbjDxXY/ghost-35852-480.webp" >
+     
+   <img id="g2" src="https://i.ibb.co/xfgZr52/ghost-151528-480.webp">   
+   
+   <img id="g3" src="https://i.ibb.co/4srCBds/ghost-1297982-480.webp">
+   
+   <img id="g4" src="https://i.ibb.co/QQbZbRt/spider-2769985-1280.png">
+   
+   <img id="roll2" src="https://i.ibb.co/YXcgCX6/cranium-1296403-480.webp" >
+   <img id="sb3" src="https://i.ibb.co/7v6CXpK/fire-312258-480.webp">
+   <img id="sb4" src="https://i.ibb.co/7v6CXpK/fire-312258-480.webp">
+   
+      </div>
+      
+      
+      <!--wish-->
+      <button id="a7" onclick="wish()">wish</button>
+      <div id="new">
+        <button onclick="ent1()" id="a9">enter the room</button>
+        </div>
+        <div id="ins-new">
+        <p>You have always been my partner in crime, but you are going to have to do this getting older thing all by yourself. Happy Birthday.<br><em>Love you </em></p>
+            <h4> happy birthday NABANITA</h4>
+        <img id="sona" src="https://api.sololearn.com/uploads/avatars/17665461.jpg" height="100px" widh="100px">
+        
+        
+            <img id="ins1" src="https://i.ibb.co/9rnQgfM/giphy-2.gif" >
+            <img id="ins2" src="https://www.animatedimages.org/data/media/77/animated-ghost-image-0075.gif">
+            <img id="sb2" src="https://i.ibb.co/Bt1HK7w/ghost-156969-480.webp">
+            <img id="sb1" src="https://i.ibb.co/m5WtJNB/ghost-151551-480.webp" >
+            <img id="ooo" src="https://i.ibb.co/TWgDDCx/death-1299194-480.webp">
+        </div>
+      
+      
+      <!--wish -end-->
+      <button id="back" onclick="back()">Back</button>
+    </body>
+  <script>
+      let timerInterval
+Swal.fire({
+title: 'wait!',
+html: 'I will close in 10 seconds.',
+timer: 10000,
+showConfirmButton: false,
+timerProgressBar: true,
+willOpen: () => {
+Swal.showLoading()
+timerInterval = setInterval(() => {
+const content = Swal.getContent()
+if (content) {
+const b = content.querySelector('b')
+if (b) {
+b.textContent = Swal.getTimerLeft()
+}
+}
+}, 100)
+},
+onClose: () => {
+clearInterval(timerInterval)
+}
+}).then((result) => {
+if (result.dismiss === Swal.DismissReason.timer) {
+console.log('I was closed by the timer')
+}
+})
+  </script>
+  
+  
+</html>
